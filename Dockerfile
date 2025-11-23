@@ -1,6 +1,7 @@
 FROM rust
 
-RUN rustup default nightly && rustup update
+RUN rustup toolchain install nightly-2022-11-30
+RUN rustup default nightly-22-11-30 && rustup update
 RUN apt install libssl-dev pkg-config
 
 WORKDIR /app
